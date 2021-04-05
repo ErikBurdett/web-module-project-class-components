@@ -1,2 +1,17 @@
-// your components will all go in this `component` directory.
-// feel free to change this component.js into TodoList.js
+import React, { Component } from 'react';
+
+
+const handleClick = (props) =>{
+    props.clearDone();
+
+}
+export class TodoList extends Component {
+    render = () => (
+        <button className="btn btn-primary" onClick={handleClick}>
+        Clear Complete Tasks
+        </button>
+    );
+
+};
+
+// can't get this to clear correctly?
