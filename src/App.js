@@ -22,6 +22,7 @@ class App extends React.Component {
   }
 
   addItem = (taskName) =>{
+    console.log("clicked");
     const newTodo ={
       task: taskName,
       id: new Date(),
@@ -33,6 +34,7 @@ class App extends React.Component {
   };
 
   toggleCompleted = (id) =>{
+    console.log("clicked");
     this.setState({
       todos: this.state.todos.map((todo)=>{
         if(todo.id === id){
@@ -49,6 +51,7 @@ class App extends React.Component {
 
   clearCompleted = (e) =>{
     e.preventDefault();
+    console.log("clicked");
     this.setState({
       todos: this.state.todos.filter((todo)=> !todo.completed)
     });
